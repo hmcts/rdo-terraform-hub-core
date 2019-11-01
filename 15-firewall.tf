@@ -1,9 +1,3 @@
-resource "azurerm_public_ip" "pip-ansible" {
-  name                                = "${azurerm_virtual_network.vnet_hub.name}-ansible-pip"
-  location                            = "${azurerm_resource_group.rg_hub.location}"
-  resource_group_name                 = "${azurerm_resource_group.rg_hub.name}"
-  allocation_method                   = "Static"
-}
 
 resource "azurerm_network_interface" "ansible_server_nic" {
   name                                = "${azurerm_virtual_network.vnet_hub.name}-ansible-nic"
@@ -14,7 +8,6 @@ resource "azurerm_network_interface" "ansible_server_nic" {
         name                          = "${azurerm_virtual_network.vnet_hub.name}-ansible-ip"
         subnet_id                     = "${azurerm_subnet.subnet-mgmt.id}"
         private_ip_address_allocation = "dynamic"
-        public_ip_address_id          = "${azurerm_public_ip.pip-ansible.id}"
     }
 }
 
@@ -30,7 +23,7 @@ module "firewall" {
   vm_username                         = "${var.firewall_username}"
   vm_password                         = "${var.firewall_password}"
   environment                         = "${var.environment}"
-  pip-ansible                         = "${azurerm_public_ip.pip-ansible.ip_address}"
+  pip-ansible                         = "${azurerm_network_interface.ansible_server_nic.private_ip_address}"
   ansible-nic                         = "${azurerm_network_interface.ansible_server_nic.id}"
 }
 
