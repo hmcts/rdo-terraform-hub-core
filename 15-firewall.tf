@@ -25,6 +25,6 @@ module "firewall" {
   environment                         = "${var.environment}"
   pip-ansible                         = "${azurerm_network_interface.ansible_server_nic.private_ip_address}"
   ansible-nic                         = "${azurerm_network_interface.ansible_server_nic.id}"
-  depends_on                          = ["azurerm_subnet" ]
+
 }
 
