@@ -1,5 +1,5 @@
 locals {
-  isddosstandard = var.ddosplan != "basic" ? [1] : [0]
+  isddosstandard = var.ddosplan != "basic" ? [1] : []
 }
 
 resource "azurerm_network_ddos_protection_plan" "main" {
