@@ -57,4 +57,4 @@ variable "firewall_replicas" {
   default                             = 1
 }
 
-variable "subnet-azure-fw-prefix" {}
+variable "subnet-dmz-azure-fw-prefix" {}
