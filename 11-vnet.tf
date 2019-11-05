@@ -19,7 +19,7 @@ resource "azurerm_virtual_network" "vnet_hub" {
     for_each = local.isddosstandard
 
     content {
-      id     = azurerm_network_ddos_protection_plan.main.id
+      id     = azurerm_network_ddos_protection_plan.main[0].id
       enable = true
     }
   }
