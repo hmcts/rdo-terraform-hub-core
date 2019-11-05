@@ -15,7 +15,7 @@ resource "azurerm_virtual_network" "vnet_hub" {
   resource_group_name                 = "${azurerm_resource_group.rg_hub.name}"
   address_space                       = ["${var.vnet_cidr}"]
   
-  dynmaic "ddos_protection_plan" {
+  dynamic "ddos_protection_plan" {
     for_each = local.isddosstandard
 
     content {
