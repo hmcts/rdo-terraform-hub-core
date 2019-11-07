@@ -1,18 +1,22 @@
 Pre-Provisioning Steps
 
 Request Subscription is setup
-  Add name to your user account in Ansible-Management and run job
+  Under your name in Ansible-Management Repo, create a PR add the newly created Subscription Group
+    ex - dcd_group_sub_contrib_XXXXXX_V2
 
 Once Access to Subscription
-  Run bootstrap/bootstrap.sh (ready scritp first - very basic)
-  Run bootstrap/keyvault.sh ( this will create the key not add the value - eady scritp first - very basic)
+  The Subscription will need to be bootstrapped so Resource Groups / Storage Account and Keyvaults for that subscription are created
+    # Note: This will change in the future
 
-Once Core-Infra Services have been built, 
+  Run bootstrap/bootstrap.sh (ready scritp first - very basic)
+  Run bootstrap/keyvault.sh ( this will create the key not add the value - read scritp first - very basic)
+
+Once built, 
 
 Reguest - Service Principal create in Azure DevOps
 Add User to Keyvault Access Policy
 
-You will need to accept terms and conditions in each subscription
+You will need to accept terms and conditions in each subscription for the following Virtual Machines
 Palo 
 F5 Best 25Mbs
 
@@ -26,3 +30,9 @@ Note:
 Until Ansible Azure Key Vault Retrieve is fixed we have to manually 
 create Storage container called certs
 upload the * platform wildcard onto the dmz storage account
+
+Overview
+
+This is the first module that is run, as part of the HUB-DMZ work, this builds the foundations that is required for the HUB section to exists, it will
+ensure the Resource Groups exist and then create the VNETS / SUBNETS and Network Security Groups.
+
