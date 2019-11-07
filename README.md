@@ -8,8 +8,8 @@
   The Subscription will need to be bootstrapped so Resource Groups / Storage Account and Keyvaults for that subscription are created
     # Note: This will change in the future
 ```bash
-bootstrap/bootstrap.sh # (ready scritp first - very basic)
-bootstrap/keyvault.sh  # ( this will create the key not add the value - read scritp first - very basic)
+bootstrap/bootstrap.sh # ( ready script first before running )
+bootstrap/keyvault.sh  # ( ready script first before running )
 ```
 
 Once built, 
