@@ -39,4 +39,10 @@ upload the * platform wildcard onto the dmz storage account
 This is the first module that is run, as part of the HUB-DMZ pipeline, this builds the foundations that is required for the HUB section to exists, it will
 ensure the Resource Groups exist and then create the VNETS / SUBNETS and Network Security Groups.
 
-Documentation: https://tools.hmcts.net/confluence/display/RD/HUB-DMZ+Overview
+### Documentation
+
+  - [Confluence: HUB-DMZ](https://tools.hmcts.net/confluence/display/RD/HUB-DMZ+Overview)
+
+### Pipeline
+
+- [Azure DevOps: HUB-DMZ](https://dev.azure.com/hmcts/DevOps/_build?definitionId=226&_a=summary)
