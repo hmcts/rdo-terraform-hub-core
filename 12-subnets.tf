@@ -6,7 +6,7 @@ resource "azurerm_subnet" "subnet-mgmt" {
   address_prefix                      = "${var.subnet-mgmt-prefix}"
   network_security_group_id           = "${azurerm_network_security_group.nsg_mgmt.id}"
   lifecycle { 
-     ignore_changes                 = ["route_table_id"]
+     ignore_changes                   = ["route_table_id"]
  }
 
 }
@@ -18,7 +18,7 @@ resource "azurerm_subnet" "subnet-private" {
   address_prefix                      = "${var.subnet-private-prefix}"
   network_security_group_id           = "${azurerm_network_security_group.nsg_transit_private.id}"
   lifecycle { 
-     ignore_changes                 = ["route_table_id"]
+     ignore_changes                   = ["route_table_id"]
  }
 
 }
@@ -31,16 +31,16 @@ resource "azurerm_subnet" "subnet-public" {
   address_prefix                      = "${var.subnet-public-prefix}"
   network_security_group_id           = "${azurerm_network_security_group.nsg_transit_public.id}"
   lifecycle { 
-     ignore_changes                 = ["route_table_id"]
+     ignore_changes                   = ["route_table_id"]
  }
 
 }
 
-resource "azurerm_subnet" "subnet-dmz-azure-fw" {
-  name                 = "AzureFirewallSubnet"
-  resource_group_name  = "${azurerm_resource_group.rg_hub.name}"
-  virtual_network_name = "${azurerm_virtual_network.vnet_hub.name}"
-  address_prefix       = "${var.subnet-dmz-azure-fw-prefix}"
+resource "azurerm_subnet" "subnet-azure-fw" {
+  name                                = "AzureFirewallSubnet"
+  resource_group_name                 = "${azurerm_resource_group.rg_hub.name}"
+  virtual_network_name                = "${azurerm_virtual_network.vnet_hub.name}"
+  address_prefix                      = "${var.subnet-dmz-azure-fw-prefix}"
 }
 
 
