@@ -1,10 +1,10 @@
 # Pre-Provisioning Steps
 
-## Request Subscription is setup
+## Request Subscription
   Under your name in Ansible-Management Repo, create a PR add the newly created Subscription Group
     ex - dcd_group_sub_contrib_XXXXXX_V2
 
-## Access to Subscription
+## Bootstrapping Subscription
   The Subscription will need to be bootstrapped so Resource Groups / Storage Account and Keyvaults for that subscription are created
     # Note: This will change in the future
 ```bash
