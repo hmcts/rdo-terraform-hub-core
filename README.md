@@ -37,7 +37,7 @@ upload the * platform wildcard onto the dmz storage account
 # Overview
 
 This is the first module that is run, as part of the HUB-DMZ pipeline, this builds the foundations that is required for the HUB section to exists, it will
-ensure the Resource Groups exist and then create the VNETS / SUBNETS and Network Security Groups.
+ensure the Resource Groups exist and then create the VNETS / SUBNETS and Network Security Groups and Log analytic workspace which is required the DDos Protection.
 
 ### Documentation
 
