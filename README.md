@@ -18,8 +18,8 @@ Reguest - Service Principal create in Azure DevOps
 Add User to Keyvault Access Policy
 
 You will need to accept terms and conditions in each subscription for the following Virtual Machines
-Palo 
-F5 Best 25Mbs
+## Palo 
+## F5 Best 25Mbs
 
 ```bash
 az login
