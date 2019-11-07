@@ -56,3 +56,5 @@ variable "firewall_password" {
 variable "firewall_replicas" {
   default                             = 1
 }
+
+variable "subnet-dmz-azure-fw-prefix" {}

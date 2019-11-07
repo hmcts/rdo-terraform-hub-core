@@ -36,6 +36,13 @@ resource "azurerm_subnet" "subnet-public" {
 
 }
 
+resource "azurerm_subnet" "subnet-dmz-azure-fw" {
+  name                 = "AzureFirewallSubnet"
+  resource_group_name  = "${azurerm_resource_group.rg_hub.name}"
+  virtual_network_name = "${azurerm_virtual_network.vnet_hub.name}"
+  address_prefix       = "${var.subnet-dmz-azure-fw-prefix}"
+}
+
 
 resource "azurerm_subnet_network_security_group_association" "nsg_mgmt" {
   subnet_id                           = "${azurerm_subnet.subnet-mgmt.id}"
