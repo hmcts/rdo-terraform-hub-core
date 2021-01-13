@@ -109,15 +109,15 @@
    --key-permissions backup create decrypt delete encrypt get import list purge recover restore sign unwrapKey update verify wrapKey
 
 
- # Platform Engineering
+ # DTS Platform Operations
  az keyvault set-policy --name ${HMCTS_HUB_INFRA} \
-   --object-id c36eaede-a0ae-4967-8fed-0a02960b1370 \
+   --object-id e7ea2042-4ced-45dd-8ae3-e051c6551789 \
    --secret-permissions backup delete get list purge recover restore set \
    --certificate-permissions backup create delete deleteissuers get getissuers import list listissuers managecontacts manageissuers purge recover restore setissuers update \
    --key-permissions backup create decrypt delete encrypt get import list purge recover restore sign unwrapKey update verify wrapKey
 
  az keyvault set-policy --name ${HMCTS_DMZ_INFRA} \
-   --object-id c36eaede-a0ae-4967-8fed-0a02960b1370 \
+   --object-id e7ea2042-4ced-45dd-8ae3-e051c6551789 \
    --secret-permissions backup delete get list purge recover restore set \
    --certificate-permissions backup create delete deleteissuers get getissuers import list listissuers managecontacts manageissuers purge recover restore setissuers update \
    --key-permissions backup create decrypt delete encrypt get import list purge recover restore sign unwrapKey update verify wrapKey
