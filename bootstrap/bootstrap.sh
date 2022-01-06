@@ -52,7 +52,7 @@
  # Storage Create
  az storage account create --name ${HMCTS_HUB_INFRA//-/} \
    --resource-group ${HMCTS_HUB_INFRA} \
-   --sku Standard_LRS \
+   --sku Standard_ZRS \
    --encryption-services blob \
    --kind StorageV2 \
    --location ${LOCATION} \
@@ -63,7 +63,7 @@
 
  az storage account create --name ${HMCTS_DMZ_INFRA//-/} \
    --resource-group ${HMCTS_DMZ_INFRA} \
-   --sku Standard_LRS \
+   --sku Standard_ZRS \
    --encryption-services blob \
    --kind StorageV2 \
    --location ${LOCATION} \
